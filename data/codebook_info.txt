@@ -1,0 +1,59 @@
+ddata.wst.txt.2020.6.23 : 학습 코디 추천 대화셋
+
+		포맷 : 발화번호 <t> <CO>|<US>|<AC> <t> 발화 <t> TAG
+
+			<CO> 코디 발화 (시스템 발화)
+			<US> 유저 발화
+			<AC> 추천 의상 ID 들
+			TAG
+				INTRO              대화 도입부
+				EXP_RES_*          추천의상 설명
+				USER_SUCCESS       추천의상 성공
+				USER_SUCCESS_PART  일부 추천의상 성공
+				USER_FAIL          추천의상 실패
+				FAIL               의상 추천 실패
+				ASK_*              사용자가 원하는 의상유형이나 스타일, 색상등에 대한 질문
+				CONFIRM_*          확인 질문
+				SUCCESS            의상 추천 성공
+				CLOSING            대화 종료
+				WAIT               대기 요청
+				SUGGEST_*          제안 발화
+				NONE               의상 없음
+				HELP               사용자 지원
+
+
+
+mdata.wst.txt.2020.6.23 : 의상 ID설명
+
+		포맷: 의상ID <t> O|T|B|S <t> 의상type <t> F|M|C|E <t> 설명
+
+			O, T, B, S   = 겉옷, 상의, 하의, 신발
+			의상 type = { 'CT':'코트', 'CD':'가디건', 'VT':'조끼', 'JK':'자켓', 'JP':'후드', 'KN':'저지', 
+			              'SW':'스웨터', 'SH':'셔츠', 'BL':'블라우스', 'SK':'스커트', 'PT':'팬츠', 
+						  'OP':'원피스', 'SE':'신발' }
+			F, M, C, E = 특징, 재질, 색상, 감성
+
+
+
+ddata.txt.2020.6.23
+
+		코디추천 대화셋 토큰분리(word segmentation) 미적용
+
+
+
+mdata.txt.2020.6.23
+
+		의상 메타 데이터 토큰분리(word segmentation) 미적용
+
+
+
+image.tgz
+
+		의상 이미지 파일들 (2603개)
+
+
+
+acbot.wordlist.fasttext.wemb
+
+		코디 대화셋과 메타 데이터에 포함된 토큰분리로부터 추출된 어휘들의 워드임베딩 사전학습 결과
+		(300M텍스트를 이용한 ddata와 mdata word segmentation 결과를 이용한 11k 어휘 fastText학습 결과)
